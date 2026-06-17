@@ -5,6 +5,9 @@
 
 本项目是采用了 CH32V203F6P6 单片机、基于 [pico-loongson-ejtag](https://github.com/RigoLigoRLC/pico-loongson-ejtag) 的成功经验与核心源码制作的、压缩成本版本的龙芯 EJTAG 调试探头实现。力求与官方 `la_dbg_tool_usb` 实现完全兼容，降低开发者使用成本、扩展龙芯嵌入式生态。
 
+> [!WARNING]
+> 此实现存在一定兼容性问题：在 2K0300 上烧录固件时，仅能与[中科云论坛上微云网盘中提供的调试工具](https://bbs.ctcisz.com/forum.php?mod=viewthread&tid=133)兼容；使用龙芯在 139 网盘提供的调试工具会无法烧录（待测试；实现时仅使用了前者进行测试）。烧录 LoongArch32 目标（测试了 1C203）时能成功用龙芯提供的调试工具烧录。上述问题由于作者本人空闲时间原因没有明确的解决 ETA，请使用已测试可用的调试工作作为变通措施。
+
 ## 硬件
 
 位于 hardware 目录中。为方便大家学习研究，使用了立创 EDA 专业版设计。
